@@ -1,4 +1,4 @@
-#include "bird.h"
+#include "Bird.hpp"
 
 
 namespace Flappy
