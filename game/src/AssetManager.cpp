@@ -1,5 +1,6 @@
 #include "AssetManager.hpp"
 
+
 namespace Flappy
 {
 	void AssetManager::LoadTexture(std::string name, std::string fileName)

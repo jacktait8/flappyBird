@@ -1,4 +1,4 @@
-#include "game.h"
+#include "Game.hpp"
 #include "SplashState.hpp"
 
 #include <stdlib.h>
