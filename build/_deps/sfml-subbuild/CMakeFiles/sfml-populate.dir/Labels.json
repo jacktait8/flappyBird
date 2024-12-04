@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/e76938bb370522529ba806f8d22dd8d0/sfml-populate.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/0aaa94edb87485462b7967368730f0e4/sfml-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-subbuild/CMakeFiles/ecc6bdfb7a47c9610dd18ce4e916a1cd/sfml-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sfml-populate"
+		],
+		"name" : "sfml-populate"
+	}
+}

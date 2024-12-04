@@ -2,7 +2,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=c++,visualstudio
 
 # stop build uploading
-/build
+#/build actually let build in as it holds a game build
+
 /out
 /out/*
 
