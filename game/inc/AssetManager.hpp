@@ -11,7 +11,7 @@ namespace Flappy
 	class AssetManager
 	{
 	public:
-		AssetManager() {}
+		AssetManager();
 		~AssetManager() {}
 
 		void LoadTexture(std::string name, std::string fileName);
@@ -24,6 +24,9 @@ namespace Flappy
 	private:
 		std::map<std::string, Texture> _textures;
 		std::map<std::string, Font> _fonts;
+
+		string m_rootDirectory;
+
 
 	};
 

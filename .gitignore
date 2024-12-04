@@ -3,6 +3,8 @@
 
 # stop build uploading
 /build
+/out
+/out/*
 
 ### C++ ###
 # Prerequisites

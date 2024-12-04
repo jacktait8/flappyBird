@@ -10,9 +10,10 @@ using namespace std;
 
 namespace Flappy
 {
-	GameOverState::GameOverState(GameDataRef data, int score) : _data(data), _score(score)
+	GameOverState::GameOverState(GameDataRef data, int score) : _data(data), _score(score), _highScore{0}
 
 	{
+
 	}
 
 	void GameOverState::Init()
