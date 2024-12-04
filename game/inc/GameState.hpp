@@ -55,6 +55,8 @@ namespace Flappy
 		Sound _pointSound;
 		Sound _wingSound;
 
+		string m_rootDirectory;
+
 	};
 
 

@@ -14,18 +14,14 @@
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Sensor.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\SensorManager.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\VideoMode.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Vulkan.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Window.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\WindowBase.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\WindowImpl.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\CursorImpl.cpp">
       <Filter>windows</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\ClipboardImpl.cpp">
-      <Filter>windows</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.cpp">
-      <Filter>windows</Filter>
-    </ClCompile>
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WglExtensions.cpp">
       <Filter>windows</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\InputImpl.cpp">
@@ -40,7 +36,13 @@
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\VideoModeImpl.cpp">
       <Filter>windows</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\VulkanImplWin32.cpp">
+      <Filter>windows</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WindowImplWin32.cpp">
+      <Filter>windows</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.cpp">
       <Filter>windows</Filter>
     </ClCompile>
   </ItemGroup>
@@ -67,7 +69,9 @@
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\SensorManager.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Window\VideoMode.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\VideoModeImpl.hpp" />
+    <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Window\Vulkan.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Window\Window.hpp" />
+    <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Window\WindowBase.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\WindowImpl.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Window\WindowStyle.hpp" />
@@ -75,12 +79,6 @@
       <Filter>windows</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\ClipboardImpl.hpp">
-      <Filter>windows</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.hpp">
-      <Filter>windows</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WglExtensions.hpp">
       <Filter>windows</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\InputImpl.hpp">
@@ -92,12 +90,21 @@
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\SensorImpl.hpp">
       <Filter>windows</Filter>
     </ClInclude>
+    <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\VulkanImplWin32.hpp">
+      <Filter>windows</Filter>
+    </ClInclude>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WindowImplWin32.hpp">
+      <Filter>windows</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\Win32\WglContext.hpp">
       <Filter>windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Window\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-build\src\SFML\Window\sfml-window.rc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="windows">

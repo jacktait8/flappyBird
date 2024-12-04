@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS sfml-system sfml-main sfml-window OpenGL sfml-network sfml-graphics Freetype OpenAL Vorbis FLAC sfml-audio)
+foreach(_cmake_expected_target IN ITEMS sfml-system sfml-main sfml-window OpenGL sfml-network sfml-graphics Freetype VORBIS FLAC sfml-audio)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -72,7 +72,7 @@ set_target_properties(sfml-window PROPERTIES
 add_library(OpenGL INTERFACE IMPORTED)
 
 set_target_properties(OpenGL PROPERTIES
-  INTERFACE_LINK_LIBRARIES "opengl32;glu32"
+  INTERFACE_LINK_LIBRARIES "opengl32"
 )
 
 # Create imported target sfml-network
@@ -99,18 +99,10 @@ set_target_properties(Freetype PROPERTIES
   INTERFACE_LINK_LIBRARIES "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/freetype.lib"
 )
 
-# Create imported target OpenAL
-add_library(OpenAL INTERFACE IMPORTED)
+# Create imported target VORBIS
+add_library(VORBIS INTERFACE IMPORTED)
 
-set_target_properties(OpenAL PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/headers/AL"
-  INTERFACE_LINK_LIBRARIES "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/openal32.lib"
-)
-
-# Create imported target Vorbis
-add_library(Vorbis INTERFACE IMPORTED)
-
-set_target_properties(Vorbis PROPERTIES
+set_target_properties(VORBIS PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "OV_EXCLUDE_STATIC_CALLBACKS"
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/headers;C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/headers"
   INTERFACE_LINK_LIBRARIES "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/vorbisenc.lib;C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/vorbisfile.lib;C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/vorbis.lib;C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/ogg.lib"
@@ -172,6 +164,7 @@ set_target_properties(sfml-graphics PROPERTIES
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_IMPLIB_DEBUG "C:/Users/jakes/source/repos/flappy/build/lib/Debug/sfml-audio-d.lib"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_DEBUG "OpenAL::OpenAL"
   IMPORTED_LOCATION_DEBUG "C:/Users/jakes/source/repos/flappy/build/bin/Debug/sfml-audio-d-2.dll"
   )
 
@@ -214,6 +207,7 @@ set_target_properties(sfml-graphics PROPERTIES
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_IMPLIB_RELEASE "C:/Users/jakes/source/repos/flappy/build/lib/Release/sfml-audio.lib"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "OpenAL::OpenAL"
   IMPORTED_LOCATION_RELEASE "C:/Users/jakes/source/repos/flappy/build/bin/Release/sfml-audio-2.dll"
   )
 
@@ -256,6 +250,7 @@ set_target_properties(sfml-graphics PROPERTIES
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_IMPLIB_MINSIZEREL "C:/Users/jakes/source/repos/flappy/build/lib/MinSizeRel/sfml-audio.lib"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_MINSIZEREL "OpenAL::OpenAL"
   IMPORTED_LOCATION_MINSIZEREL "C:/Users/jakes/source/repos/flappy/build/bin/MinSizeRel/sfml-audio-2.dll"
   )
 
@@ -298,6 +293,7 @@ set_target_properties(sfml-graphics PROPERTIES
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/jakes/source/repos/flappy/build/lib/RelWithDebInfo/sfml-audio.lib"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELWITHDEBINFO "OpenAL::OpenAL"
   IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/jakes/source/repos/flappy/build/bin/RelWithDebInfo/sfml-audio-2.dll"
   )
 

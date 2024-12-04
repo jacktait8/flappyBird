@@ -20,7 +20,6 @@
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Graphics\Transformable.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Graphics\View.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Graphics\Vertex.cpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Graphics\GLLoader.cpp" />
     <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Graphics\Shape.cpp">
       <Filter>drawables</Filter>
     </ClCompile>
@@ -81,7 +80,6 @@
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Graphics\Transformable.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Graphics\View.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Graphics\Vertex.hpp" />
-    <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Graphics\GLLoader.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\Graphics\Drawable.hpp">
       <Filter>drawables</Filter>
     </ClInclude>
@@ -121,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\Graphics\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.rc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="drawables">

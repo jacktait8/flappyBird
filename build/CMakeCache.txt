@@ -174,6 +174,10 @@ CMAKE_MT:FILEPATH=CMAKE_MT-NOTFOUND
 //macOS architecture to build; 64-bit is expected
 CMAKE_OSX_ARCHITECTURES:STRING=x86_64
 
+//The minimal iOS version that will be able to run the built binaries.
+// Cannot be lower than 13.0
+CMAKE_OSX_DEPLOYMENT_TARGET:STRING=13.0
+
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
 
@@ -269,6 +273,33 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Enable to build 7-Zip packages
+CPACK_BINARY_7Z:BOOL=OFF
+
+//Enable to build IFW packages
+CPACK_BINARY_IFW:BOOL=OFF
+
+//Enable to build Inno Setup packages
+CPACK_BINARY_INNOSETUP:BOOL=OFF
+
+//Enable to build NSIS packages
+CPACK_BINARY_NSIS:BOOL=ON
+
+//Enable to build NuGet packages
+CPACK_BINARY_NUGET:BOOL=OFF
+
+//Enable to build WiX packages
+CPACK_BINARY_WIX:BOOL=OFF
+
+//Enable to build ZIP packages
+CPACK_BINARY_ZIP:BOOL=OFF
+
+//Enable to build 7-Zip source packages
+CPACK_SOURCE_7Z:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=ON
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=C:/Users/jakes/source/repos/flappy/build/_deps
 
@@ -359,6 +390,9 @@ SFML_BUILD_GRAPHICS:BOOL=TRUE
 //TRUE to build SFML's Network module.
 SFML_BUILD_NETWORK:BOOL=TRUE
 
+//TRUE to build the SFML test suite, FALSE to ignore it
+SFML_BUILD_TEST_SUITE:BOOL=FALSE
+
 //TRUE to build SFML's Window module. This setting is ignored,
 // if the graphics module is built.
 SFML_BUILD_WINDOW:BOOL=TRUE
@@ -407,6 +441,9 @@ VORBIS_INCLUDE_DIR:PATH=C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/
 //Path to a library.
 VORBIS_LIBRARY:FILEPATH=C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/vorbis.lib
 
+//Treat compiler warnings as errors
+WARNINGS_AS_ERRORS:BOOL=OFF
+
 //Value Computed by CMake
 box2d_BINARY_DIR:STATIC=C:/Users/jakes/source/repos/flappy/build/_deps/box2d-build
 
@@ -417,7 +454,7 @@ box2d_IS_TOP_LEVEL:STATIC=OFF
 box2d_SOURCE_DIR:STATIC=C:/Users/jakes/source/repos/flappy/build/_deps/box2d-src
 
 //Dependencies for the target
-sfml-audio_LIB_DEPENDS:STATIC=general;sfml-system;
+sfml-audio_LIB_DEPENDS:STATIC=general;OpenAL::OpenAL;general;sfml-system;
 
 //Dependencies for the target
 sfml-graphics_LIB_DEPENDS:STATIC=general;sfml-window;
@@ -600,6 +637,24 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_7Z
+CPACK_BINARY_7Z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_IFW
+CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_INNOSETUP
+CPACK_BINARY_INNOSETUP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NSIS
+CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NUGET
+CPACK_BINARY_NUGET-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_WIX
+CPACK_BINARY_WIX-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_ZIP
+CPACK_BINARY_ZIP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_7Z
+CPACK_SOURCE_7Z-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //Details about finding FLAC
 FIND_PACKAGE_MESSAGE_DETAILS_FLAC:INTERNAL=[C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/libs-msvc-universal/x64/flac.lib][C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/extlibs/headers][v()]
 //Details about finding OpenAL

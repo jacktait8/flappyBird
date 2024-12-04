@@ -9,25 +9,26 @@ using namespace std;
 
 namespace Flappy
 {
-	GameState::GameState(GameDataRef data) : _data(data)
+	GameState::GameState(GameDataRef data) : _data(data), m_rootDirectory{}
 	{
+		m_rootDirectory = "../";
 	}
 
 	void GameState::Init()
 	{
 		cout << "Game Initilaised" << endl;
 
-		if (!_hitSoundBuffer.loadFromFile(HIT_SOUND_FILEPATH))
+		if (!_hitSoundBuffer.loadFromFile(m_rootDirectory + HIT_SOUND_FILEPATH))
 		{
 			cout << "Error HIT sound file not loaded! " << endl;
 		}
 
-		if (!_pointSoundBuffer.loadFromFile(POINT_SOUND_FILEPATH))
+		if (!_pointSoundBuffer.loadFromFile(m_rootDirectory + POINT_SOUND_FILEPATH))
 		{
 			cout << "Error POINT sound file not loaded! " << endl;
 		}
 
-		if (!_wingSoundBuffer.loadFromFile(WING_SOUND_FILEPATH))
+		if (!_wingSoundBuffer.loadFromFile(m_rootDirectory + WING_SOUND_FILEPATH))
 		{
 			cout << "Error WING sound file not loaded! " << endl;
 		}

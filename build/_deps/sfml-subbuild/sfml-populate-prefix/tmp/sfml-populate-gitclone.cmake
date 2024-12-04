@@ -52,13 +52,13 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe"
-          checkout "2.5.1" --
+          checkout "2.6.2" --
   WORKING_DIRECTORY "C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: '2.5.1'")
+  message(FATAL_ERROR "Failed to checkout tag: '2.6.2'")
 endif()
 
 set(init_submodules TRUE)

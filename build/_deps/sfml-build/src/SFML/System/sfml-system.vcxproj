@@ -292,7 +292,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-build\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/src/SFML/System/CMakeLists.txt</Message>
@@ -305,7 +305,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-build\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/src/SFML/System/CMakeLists.txt</Message>
@@ -318,7 +318,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-build\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/jakes/source/repos/flappy/build/_deps/sfml-src/src/SFML/System/CMakeLists.txt</Message>
@@ -331,37 +331,190 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\jakes\source\repos\flappy\build\_deps\sfml-build\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Clock.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Clock.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Clock.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Err.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Err.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Err.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Export.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\InputStream.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Lock.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Lock.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Lock.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Mutex.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Mutex.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Mutex.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\NativeActivity.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\NonCopyable.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Sleep.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Sleep.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Sleep.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\String.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\String.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\String.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\String.inl" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Thread.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Thread.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Thread.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Thread.inl" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\ThreadLocal.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\ThreadLocal.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\ThreadLocal.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\ThreadLocalPtr.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\ThreadLocalPtr.inl" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Time.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Time.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Time.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Utf.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Utf.inl" />
@@ -369,20 +522,140 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Vector2.inl" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Vector3.hpp" />
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\Vector3.inl" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\FileInputStream.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\FileInputStream.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\FileInputStream.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\MemoryInputStream.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\MemoryInputStream.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\include\SFML\System\MemoryInputStream.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ClockImpl.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ClockImpl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ClockImpl.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\MutexImpl.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\MutexImpl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\MutexImpl.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\SleepImpl.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\SleepImpl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\SleepImpl.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ThreadImpl.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ThreadImpl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ThreadImpl.hpp" />
-    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ThreadLocalImpl.cpp" />
+    <ClCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ThreadLocalImpl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Level4</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">4289</TreatSpecificWarningsAsErrors>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
+    </ClCompile>
     <ClInclude Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-src\src\SFML\System\Win32\ThreadLocalImpl.hpp" />
+    <ResourceCompile Include="C:\Users\jakes\source\repos\flappy\build\_deps\sfml-build\src\SFML\System\sfml-system.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\jakes\source\repos\flappy\build\ZERO_CHECK.vcxproj">

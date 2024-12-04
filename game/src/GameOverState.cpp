@@ -10,7 +10,7 @@ using namespace std;
 
 namespace Flappy
 {
-	GameOverState::GameOverState(GameDataRef data, int score) : _data(data), _score(score), _highScore{0}
+	GameOverState::GameOverState(GameDataRef data, int score) : _data(data), _score(score), _highScore{ 0 }
 
 	{
 
@@ -67,8 +67,8 @@ namespace Flappy
 
 		// set positions
 		_gameOverBody.setPosition(
-			_data->window.getSize().x / 2 - (_gameOverBody.getGlobalBounds().width / 2),
-			_data->window.getSize().y / 2 - (_gameOverBody.getGlobalBounds().height / 2)
+			_data->window.getSize().x / 2.f - (_gameOverBody.getGlobalBounds().width / 2),
+			_data->window.getSize().y / 2.f - (_gameOverBody.getGlobalBounds().height / 2)
 			);
 
 		_gameOverTitle.setPosition(

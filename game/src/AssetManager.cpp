@@ -6,7 +6,7 @@ namespace Flappy
 {
 	AssetManager::AssetManager() : m_rootDirectory{}
 	{
-		m_rootDirectory = "";
+		m_rootDirectory = "../";
 
 	}
 
@@ -15,7 +15,7 @@ namespace Flappy
 	{
 		Texture tex;
 
-		if (tex.loadFromFile(fileName))
+		if (tex.loadFromFile(m_rootDirectory + fileName))
 		{
 			this->_textures[name] = tex;
 		}
@@ -30,7 +30,7 @@ namespace Flappy
 		Font font;
 
 
-		if (font.loadFromFile(fileName))
+		if (font.loadFromFile(m_rootDirectory + fileName))
 		{
 
 			this->_fonts[name] = font;
