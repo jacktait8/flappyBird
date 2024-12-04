@@ -2,6 +2,11 @@
 !build/
 !build/**
 
+# delete the cmakecache.txt
+build/CMakeCache.txt
+build/_deps/sfml-subbuild/CMakeCache.txt
+
+
 # Exclude intermediate build artifacts but allow game output
 build/**/Debug/
 build/**/Release/
