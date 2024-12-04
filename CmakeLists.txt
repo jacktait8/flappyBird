@@ -113,8 +113,9 @@ message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 message(STATUS "CMAKE bin location: ${CMAKE_BINARY_DIR}")
 
 # Copy resources after build
-set(RESOURCES_DEST_DIR "${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE}/Resources")
+
 set(RESOURCES_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Resources")
+set(RESOURCES_DEST_DIR "${CMAKE_BINARY_DIR}/bin/Resources")
 
 message(STATUS "Copying Resources folder from ${RESOURCES_SOURCE_DIR} to ${RESOURCES_DEST_DIR}")
 
@@ -132,10 +133,18 @@ endif()
 
 message(STATUS "OpenAL32 Location: ${OPENAL32}")
 
+#debug
 add_custom_command(TARGET ${FLAPPY_BIRD_GAME_TARGET_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${OPENAL32}
-        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/openal32.dll
+        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/Debug/openal32.dll
+    COMMENT "Copying OpenAL32.dll to ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"
+)
+# release
+add_custom_command(TARGET ${FLAPPY_BIRD_GAME_TARGET_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${OPENAL32}
+        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/Release/openal32.dll
     COMMENT "Copying OpenAL32.dll to ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"
 )
 

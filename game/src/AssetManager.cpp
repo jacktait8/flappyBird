@@ -6,7 +6,11 @@ namespace Flappy
 {
 	AssetManager::AssetManager() : m_rootDirectory{}
 	{
-		m_rootDirectory = "../";
+		#ifdef _DEBUG
+			m_rootDirectory = "../";
+		#else
+			m_rootDirectory = "../";
+		#endif
 
 	}
 
@@ -14,6 +18,8 @@ namespace Flappy
 	void AssetManager::LoadTexture(std::string name, std::string fileName)
 	{
 		Texture tex;
+
+		//printf("Root: %s", m_rootDirectory + fileName);
 
 		if (tex.loadFromFile(m_rootDirectory + fileName))
 		{

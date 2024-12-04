@@ -1,29 +1,11 @@
 # Allow the build folder to include game build
 !build/
-!build/**
 
 # delete the cmakecache.txt
+build/**
 build/CMakeCache.txt
 build/_deps/sfml-subbuild/CMakeCache.txt
 
-
-# Exclude intermediate build artifacts but allow game output
-build/**/Debug/
-build/**/Release/
-build/**/obj/
-build/**/logs/
-
-# Keep specific game-related files or folders
-!build/game/
-!build/game/**
-
-# Keep _deps folder and contents
-!_deps/
-!_deps/**
-
-# Stop build uploading but keep tracked content
-/out
-/out/*
 
 ### C++ ###
 # Prerequisites

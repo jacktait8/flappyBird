@@ -9,9 +9,23 @@ using namespace std;
 
 namespace Flappy
 {
-	GameState::GameState(GameDataRef data) : _data(data), m_rootDirectory{}
+	GameState::GameState(GameDataRef data) :
+		_data(data),
+		m_rootDirectory{},
+		_gameState{},
+		_score{},
+		bird{},
+		flash{},
+		hud{},
+		land{},
+		pipe{}
 	{
-		m_rootDirectory = "../";
+		#ifdef _DEBUG
+			m_rootDirectory = "../";
+		#else
+			m_rootDirectory = "../";
+		#endif
+
 	}
 
 	void GameState::Init()
