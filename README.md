@@ -31,6 +31,13 @@
 #### github link below
 #### https://github.com/jacktait8/flappyBird/
 
+#### the game will build in either 
+#### \build\bin\Debug
+#### \build\bin\Release
+#### The Resources or assets are a folder down to share amonst folders 
+#### and the cmake copies these asset from the base game assets  
+
+
 #### controls
 #### left click to start game, tap left click to click upwards
 #### Escape should allow tyou to quit the game instantly  
