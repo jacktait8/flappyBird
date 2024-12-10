@@ -1,4 +1,5 @@
 #include <sstream>
+#include "GameState.hpp"
 #include "SplashState.hpp"
 #include "MainMenuState.hpp"
 #include "DEFINITIONS.hpp"
@@ -12,7 +13,6 @@ namespace Flappy
 	SplashState::SplashState(GameDataRef data) : _data(data)
 	{
 
-
 	}
 
 	void SplashState::Init()
@@ -20,6 +20,7 @@ namespace Flappy
 		_data->assets.LoadTexture("Splash State Background", SPLASH_SCENE_BACKGROUND_FILEPATH);
 
 		_background.setTexture(this->_data->assets.GetTexture("Splash State Background"));
+
 	}
 
 	void SplashState::HandleInput()
@@ -27,9 +28,10 @@ namespace Flappy
 		Event event;
 		while (_data->window.pollEvent(event))
 		{
-			if (Event::Closed == event.type)
+			if (Event::Closed == event.type || event.key.code == Keyboard::Escape)
 			{
-				_data->window.close();
+				GameState::CloseApplication(*_data);
+
 			}
 		}
 	}
@@ -41,6 +43,8 @@ namespace Flappy
 			_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
 		}
 
+
+
 	}
 
 	void SplashState::Draw(float dt)
@@ -50,6 +54,8 @@ namespace Flappy
 		_data->window.draw(_background);
 
 		_data->window.display();
+
+
 
 	}
 

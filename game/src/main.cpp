@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-	Flappy::Game(SCREEN_WIDTH, SCREEN_HEIGHT, "Flappy Bord");
+	Flappy::Game(SCREEN_WIDTH, SCREEN_HEIGHT, "Flappy Bird");
 
 	return EXIT_SUCCESS;
 }

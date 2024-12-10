@@ -83,8 +83,15 @@ namespace Flappy
 		_score = 0;
 		hud->UpdateScore(_score);
 
-		_gameState = GameStates::eReady;
 
+		// load a font
+		_data->assets.LoadFont("Exit Font", FLAPPY_FONT_FILEPATH);
+
+		// initilaize the exit button
+		InitExitButton(_data->assets.GetFont("Exit Font"), Vector2f(SCREEN_WIDTH - 150.f, 25.0f));
+
+
+		_gameState = GameStates::eReady;
 
 	}
 
@@ -95,9 +102,10 @@ namespace Flappy
 		Event event;
 		while (_data->window.pollEvent(event))
 		{
-			if (Event::Closed == event.type)
+			if (Event::Closed == event.type || event.key.code == Keyboard::Escape)
 			{
-				_data->window.close();
+				GameState::CloseApplication(*_data);
+
 			}
 
 			/*if (_data->input.IsSpriteClicked(_background, Mouse::Left, _data->window))
@@ -107,6 +115,8 @@ namespace Flappy
 				// test to click to game over screen
 				_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 			}*/
+
+
 
 
 			//
@@ -122,6 +132,25 @@ namespace Flappy
 				}
 
 			}
+
+			// adding a key to escape application
+			if (Event::EventType::KeyPressed == event.type)
+			{
+				if (event.key.code == Keyboard::Escape)
+				{
+					cout << "Escape pushed" << endl;
+					GameState::CloseApplication(*_data);
+				}
+			}
+
+			// red exit button
+			if (HandleExitButtonInput(event, _data->window)) {
+				std::cout << "Exit button clicked!" << std::endl;
+				GameState::CloseApplication(*_data);
+			}
+
+
+
 
 			if (event.type == sf::Event::Resized) {
 				// resize my view
@@ -260,8 +289,16 @@ namespace Flappy
 		hud->Draw();
 		flash->Draw(dt);
 
+		DrawExitButton(_data->window);
+
 
 		_data->window.display();
+	}
+
+	void GameState::CloseApplication(GameData& data)
+	{
+		data.window.close();
+		std::cout << "Game window closed. Exiting application." << std::endl;
 	}
 
 

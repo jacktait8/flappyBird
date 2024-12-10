@@ -132,7 +132,11 @@ namespace Flappy
 		_medal.setPosition(175, 465);
 
 
+		// load a font
+		_data->assets.LoadFont("Exit Font", FLAPPY_FONT_FILEPATH);
 
+		// initilaize the exit button
+		InitExitButton(_data->assets.GetFont("Exit Font"), Vector2f(SCREEN_WIDTH - 150.f, 25.0f));
 
 
 	}
@@ -142,14 +146,32 @@ namespace Flappy
 		Event event;
 		while (_data->window.pollEvent(event))
 		{
-			if (Event::Closed == event.type)
+
+			if (Event::Closed == event.type || event.key.code == Keyboard::Escape)
 			{
-				_data->window.close();
+				GameState::CloseApplication(*_data);
+
 			}
 
 			if (_data->input.IsSpriteClicked(_retryButton, Mouse::Left, _data->window))
 			{
 				_data->machine.AddState(StateRef(new GameState(_data)), true);
+			}
+
+			// adding a key to escape application
+			if (Event::EventType::KeyPressed == event.type)
+			{
+				if (event.key.code == Keyboard::Escape)
+				{
+					cout << "Escape pushed" << endl;
+					GameState::CloseApplication(*_data);
+				}
+			}
+
+			// red exit button
+			if (HandleExitButtonInput(event, _data->window)) {
+				std::cout << "Exit button clicked!" << std::endl;
+				GameState::CloseApplication(*_data);
 			}
 
 
@@ -174,6 +196,7 @@ namespace Flappy
 
 		_data->window.draw(_medal);
 
+		DrawExitButton(_data->window);
 
 
 		_data->window.display();

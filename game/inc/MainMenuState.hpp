@@ -20,12 +20,16 @@ namespace Flappy
 		void Update(float dt);
 		void Draw(float dt);
 
+
 	private:
 		GameDataRef _data;
 
 		Sprite _background;
 		Sprite _title;
 		Sprite _playButton;
+
+
+
 	};
 
 

@@ -1,8 +1,9 @@
 #include <sstream>
+#include <iostream>
 #include "MainMenuState.hpp"
 #include "GameState.hpp"
 #include "DEFINITIONS.hpp"
-#include <iostream>
+#include "AssetManager.hpp"
 
 using namespace sf;
 using namespace std;
@@ -35,6 +36,11 @@ namespace Flappy
 			(SCREEN_HEIGHT / 2) - (_playButton.getGlobalBounds().height / 2));
 
 
+		// load a font
+		_data->assets.LoadFont("Exit Font", FLAPPY_FONT_FILEPATH);
+
+		// initilaize the exit button
+		InitExitButton(_data->assets.GetFont("Exit Font"), Vector2f(SCREEN_WIDTH - 150.f, 25.0f));
 	}
 
 	void Flappy::MainMenuState::HandleInput()
@@ -55,6 +61,24 @@ namespace Flappy
 
 			}
 
+			// adding a key to escape application
+			if (Event::EventType::KeyPressed == event.type)
+			{
+				if (event.key.code == Keyboard::Escape)
+				{
+					cout << "Escape pushed" << endl;
+					GameState::CloseApplication(*_data);
+				}
+			}
+
+			// red exit button
+			if (HandleExitButtonInput(event, _data->window)) {
+				std::cout << "Exit button clicked!" << std::endl;
+				GameState::CloseApplication(*_data);
+			}
+
+
+
 
 		}
 	}
@@ -71,8 +95,13 @@ namespace Flappy
 		_data->window.draw(_title);
 		_data->window.draw(_playButton);
 
+		DrawExitButton(_data->window);
+
+
 		_data->window.display();
 	}
+
+
 
 
 

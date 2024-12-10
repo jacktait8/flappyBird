@@ -28,6 +28,7 @@ namespace Flappy
 		void HandleInput();
 		void Update(float dt);
 		void Draw(float dt);
+		static void CloseApplication(GameData&);
 
 	private:
 		GameDataRef _data;
@@ -56,6 +57,8 @@ namespace Flappy
 		Sound _wingSound;
 
 		string m_rootDirectory;
+
+
 
 	};
 
