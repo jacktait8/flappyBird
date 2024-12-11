@@ -55,7 +55,8 @@ namespace Flappy
 
 
 		// grab textures
-		_data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
+		//_data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
+		_data->level->LoadLevelTextures("Game Background", GAME_BACKGROUND_FILENAME);
 		_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
 		_data->level->LoadLevelTextures("Land", LAND_FILENAME);
@@ -78,7 +79,8 @@ namespace Flappy
 		flash = new Flash(_data);
 
 		// assign to variables
-		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
+		//_background.setTexture(this->_data->assets.GetTexture("Game Background"));
+		_background.setTexture(this->_data->level->GetLevelTexture("Game Background"));
 
 		_score = 0;
 		hud->UpdateScore(_score);
@@ -246,7 +248,10 @@ namespace Flappy
 					))
 					{
 						_score++;
+
+						// Check score and update sprites
 						_data->level->CheckLevel(_score);
+						_background.setTexture(_data->level->GetLevelTexture("Game Background"));
 						land->UpdateSprites();
 
 						hud->UpdateScore(_score);
