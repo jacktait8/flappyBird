@@ -8,10 +8,10 @@ namespace Flappy
 	Bird::Bird(GameDataRef data) : _data(data)
 	{
 		_animationIterator = 0;
-		_animationFrames.push_back(_data->assets.GetTexture("Bird Frame 1"));
-		_animationFrames.push_back(_data->assets.GetTexture("Bird Frame 2"));
-		_animationFrames.push_back(_data->assets.GetTexture("Bird Frame 3"));
-		_animationFrames.push_back(_data->assets.GetTexture("Bird Frame 4"));
+		_animationFrames.push_back(_data->level->GetLevelTexture("Bird Frame 1"));
+		_animationFrames.push_back(_data->level->GetLevelTexture("Bird Frame 2"));
+		_animationFrames.push_back(_data->level->GetLevelTexture("Bird Frame 3"));
+		_animationFrames.push_back(_data->level->GetLevelTexture("Bird Frame 4"));
 
 
 		_birdSprite.setTexture(_animationFrames.at(_animationIterator));
@@ -111,6 +111,13 @@ namespace Flappy
 	const Sprite &Bird::GetSprite() const
 	{
 		return _birdSprite;
+	}
+
+	void Bird::UpdateSprites() {
+		_animationFrames.at(0) = _data->level->GetLevelTexture("Bird Frame 1");
+		_animationFrames.at(1) = _data->level->GetLevelTexture("Bird Frame 2");
+		_animationFrames.at(2) = _data->level->GetLevelTexture("Bird Frame 3");
+		_animationFrames.at(3) = _data->level->GetLevelTexture("Bird Frame 4");
 	}
 
 

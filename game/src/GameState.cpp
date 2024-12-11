@@ -55,7 +55,6 @@ namespace Flappy
 
 
 		// grab textures
-		//_data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
 		_data->level->LoadLevelTextures("Game Background", GAME_BACKGROUND_FILENAME);
 		_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
@@ -65,10 +64,10 @@ namespace Flappy
 		// font
 		_data->assets.LoadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
 
-		_data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
-		_data->assets.LoadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
-		_data->assets.LoadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
-		_data->assets.LoadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
+		_data->level->LoadLevelTextures("Bird Frame 1", BIRD_FRAME_1_FILENAME);
+		_data->level->LoadLevelTextures("Bird Frame 2", BIRD_FRAME_2_FILENAME);
+		_data->level->LoadLevelTextures("Bird Frame 3", BIRD_FRAME_3_FILENAME);
+		_data->level->LoadLevelTextures("Bird Frame 4", BIRD_FRAME_4_FILENAME);
 
 		pipe = new Pipe( _data );
 		land = new Land( _data );
@@ -79,7 +78,6 @@ namespace Flappy
 		flash = new Flash(_data);
 
 		// assign to variables
-		//_background.setTexture(this->_data->assets.GetTexture("Game Background"));
 		_background.setTexture(this->_data->level->GetLevelTexture("Game Background"));
 
 		_score = 0;
@@ -253,6 +251,7 @@ namespace Flappy
 						_data->level->CheckLevel(_score);
 						_background.setTexture(_data->level->GetLevelTexture("Game Background"));
 						land->UpdateSprites();
+						bird->UpdateSprites();
 
 						hud->UpdateScore(_score);
 

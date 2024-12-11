@@ -43,10 +43,10 @@ namespace Flappy
 #define LAND_FILENAME "Land.png"
 
 // bird animations
-#define BIRD_FRAME_1_FILEPATH "Resources/res/bird-01.png"
-#define BIRD_FRAME_2_FILEPATH "Resources/res/bird-02.png"
-#define BIRD_FRAME_3_FILEPATH "Resources/res/bird-03.png"
-#define BIRD_FRAME_4_FILEPATH "Resources/res/bird-04.png"
+#define BIRD_FRAME_1_FILENAME "bird-01.png"
+#define BIRD_FRAME_2_FILENAME "bird-02.png"
+#define BIRD_FRAME_3_FILENAME "bird-03.png"
+#define BIRD_FRAME_4_FILENAME "bird-04.png"
 
 #define BIRD_ANIMATION_DURATION 0.25f
 

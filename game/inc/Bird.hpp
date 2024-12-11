@@ -25,6 +25,7 @@ namespace Flappy
 		void Tap();
 
 		const Sprite& GetSprite() const;
+		void UpdateSprites();
 
 
 	private:
