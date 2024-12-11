@@ -235,6 +235,9 @@ namespace Flappy
 			// collision with scoring pipes
 			if (GameStates::ePlaying == _gameState)
 			{
+				// Update the scoring timer
+				_data->scoreTimer += dt;
+
 				vector<Sprite> scoringSprites = pipe->GetScoringSprites();
 				for (int i = 0; i < scoringSprites.size(); i++)
 				{
@@ -245,24 +248,29 @@ namespace Flappy
 						1.0f
 					))
 					{
-						_score++;
-
-						// Check score and update sprites
-						_data->level->CheckLevel(_score);
-						_background.setTexture(_data->level->GetLevelTexture("Game Background"));
-						land->UpdateSprites();
-						bird->UpdateSprites();
-
-						hud->UpdateScore(_score);
-						_pointSound.play();
-
 						scoringSprites.erase(scoringSprites.begin() + i);
-
 					}
 				}
 
 
+				// Every second...
+				if (_data->scoreTimer >= 1.f)
+				{
+					// ... update the score and sprites ...
+					_score++;
 
+					// Check score and update sprites
+					_data->level->CheckLevel(_score);
+					_background.setTexture(_data->level->GetLevelTexture("Game Background"));
+					land->UpdateSprites();
+					bird->UpdateSprites();
+
+					hud->UpdateScore(_score);
+					_pointSound.play();
+
+					// ... then reset the score timer
+					_data->scoreTimer = 0.f;
+				}
 			}
 
 

@@ -12,7 +12,6 @@ namespace Flappy
 	}
 
 	void LevelManager::CheckLevel(int score) {
-		printf("Checking score\n");
 		if (score >= PLATINUM_MEDAL_SCORE) {
 			currentLevel = 4;
 		}
@@ -30,7 +29,6 @@ namespace Flappy
 	void LevelManager::LoadLevelTextures(string name, string fileName) {
 		Texture tex;
 		for (int i = 1; i < 5; i++) {
-			printf("Loading texture name %s at location %s  ||  LoadTexture(%s, %s)", name.c_str(), fileName.c_str(), (getLevelTexturePrefix(i) + name).c_str(), (string(RES_DIR) + "lvl" + to_string(i) + "/" + fileName).c_str());
 			assetManager.LoadTexture(getLevelTexturePrefix(i) + name, string(RES_DIR) + "lvl" + to_string(i) + "/" + fileName);
 		}
 

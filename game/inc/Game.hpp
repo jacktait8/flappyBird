@@ -21,6 +21,7 @@ namespace Flappy
 		AssetManager assets;
 		LevelManager* level;
 		InputManager input;
+		float scoreTimer;
 	};
 
 
