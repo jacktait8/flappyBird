@@ -27,8 +27,8 @@ namespace Flappy
 #define GAME_BACKGROUND_FILENAME "sky.png"
 #define GAME_OVER_BACKGROUND_FILEPATH "Resources/res/sky.png"
 
-#define PIPE_UP_FILEPATH "Resources/res/PipeUp.png"
-#define PIPE_DOWN_FILEPATH "Resources/res/PipeDown.png"
+//#define PIPE_UP_FILEPATH "Resources/res/PipeUp.png"
+//#define PIPE_DOWN_FILEPATH "Resources/res/PipeDown.png"
 #define PIPE_UP_FILENAME "PipeUp.png"
 #define PIPE_DOWN_FILENAME "PipeDown.png"
 #define GAME_TITLE_FILEPATH "Resources/res/title.png"

@@ -12,7 +12,7 @@ namespace Flappy
 
 	void Pipe::SpawnBottomPipe()
 	{
-		Sprite sprite( _data->assets.GetTexture("Pipe Up"));
+		Sprite sprite( _data->level->GetLevelTexture("Pipe Up"));
 		sprite.setPosition(
 			this->_data->window.getSize().x,
 			this->_data->window.getSize().y - sprite.getGlobalBounds().height - _pipeSpawnYOffset);
@@ -22,7 +22,7 @@ namespace Flappy
 
 	void Pipe::SpawnTopPipe()
 	{
-		Sprite sprite(_data->assets.GetTexture("Pipe Down"));
+		Sprite sprite(_data->level->GetLevelTexture("Pipe Down"));
 		sprite.setPosition(
 			this->_data->window.getSize().x,
 			- _pipeSpawnYOffset);
@@ -32,7 +32,7 @@ namespace Flappy
 
 	void Pipe::SpawnInvisiblePipe()
 	{
-		Sprite sprite(_data->assets.GetTexture("Pipe Up"));
+		Sprite sprite(_data->level->GetLevelTexture("Pipe Up"));
 		sprite.setPosition(
 			this->_data->window.getSize().x,
 			this->_data->window.getSize().y - sprite.getGlobalBounds().height);
@@ -115,6 +115,8 @@ namespace Flappy
 	{
 		return scoringPipes;
 	}
+
+	// Note: No Pipe::UpdateSprites() method since each new pipe indicates the new level the player has reached
 
 	Pipe::~Pipe()
 	{

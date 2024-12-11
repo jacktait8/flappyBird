@@ -56,8 +56,8 @@ namespace Flappy
 
 		// grab textures
 		_data->level->LoadLevelTextures("Game Background", GAME_BACKGROUND_FILENAME);
-		_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
-		_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
+		_data->level->LoadLevelTextures("Pipe Up", PIPE_UP_FILENAME);
+		_data->level->LoadLevelTextures("Pipe Down", PIPE_DOWN_FILENAME);
 		_data->level->LoadLevelTextures("Land", LAND_FILENAME);
 
 		_data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
@@ -254,10 +254,10 @@ namespace Flappy
 						bird->UpdateSprites();
 
 						hud->UpdateScore(_score);
+						_pointSound.play();
 
 						scoringSprites.erase(scoringSprites.begin() + i);
 
-						_pointSound.play();
 					}
 				}
 
