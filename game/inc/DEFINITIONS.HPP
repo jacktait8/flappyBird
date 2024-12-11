@@ -8,6 +8,11 @@ namespace Flappy
 #define SCREEN_HEIGHT 1024
 #define SPLASH_STATE_SHOW_TIME 3.0
 
+
+// Resource directory
+#define RES_DIR "Resources/res/"
+
+
 // Fonts
 #define FLAPPY_FONT_FILEPATH "Resources/fonts/FlappyFont.ttf"
 
@@ -23,6 +28,8 @@ namespace Flappy
 
 #define PIPE_UP_FILEPATH "Resources/res/PipeUp.png"
 #define PIPE_DOWN_FILEPATH "Resources/res/PipeDown.png"
+#define PIPE_UP_FILENAME "PipeUp.png"
+#define PIPE_DOWN_FILENAME "PipeDown.png"
 #define GAME_TITLE_FILEPATH "Resources/res/title.png"
 #define PLAY_BUTTON_FILEPATH "Resources/res/PlayButton.png"
 #define SCORING_PIPE_FILEPATH "Resources/res/InvisibleScoringPipe.png"
@@ -32,7 +39,7 @@ namespace Flappy
 #define PIPE_SPAWN_FREQUENCY 2.2f
 
 // land texture
-#define LAND_FILEPATH "Resources/res/Land.png"
+#define LAND_FILENAME "Land.png"
 
 // bird animations
 #define BIRD_FRAME_1_FILEPATH "Resources/res/bird-01.png"

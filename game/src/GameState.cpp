@@ -58,7 +58,7 @@ namespace Flappy
 		_data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
 		_data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
 		_data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
-		_data->assets.LoadTexture("Land", LAND_FILEPATH);
+		_data->level->LoadLevelTextures("Land", LAND_FILENAME);
 
 		_data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
 		// font
@@ -177,6 +177,8 @@ namespace Flappy
 
 		if (GameStates::ePlaying == _gameState)
 		{
+			_data->level->CheckLevel(_score);
+
 			pipe->MovePipes(dt);
 
 			if (clock.getElapsedTime().asSeconds() > PIPE_SPAWN_FREQUENCY)
@@ -244,6 +246,8 @@ namespace Flappy
 					))
 					{
 						_score++;
+						_data->level->CheckLevel(_score);
+						land->UpdateSprites();
 
 						hud->UpdateScore(_score);
 

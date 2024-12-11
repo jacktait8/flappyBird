@@ -12,6 +12,8 @@ namespace Flappy
 
 		_data->window.create(VideoMode(width, height), title, Style::Close | Style::Titlebar | Style::Resize | Style::Default);
 
+		_data->level = new LevelManager(_data->assets);
+
 		_data->machine.AddState(StateRef(new SplashState(this->_data)), false);
 
 		this->Run();
@@ -52,6 +54,11 @@ namespace Flappy
 
 		}
 
+	}
+
+
+	Game::~Game() {
+		delete _data->level;
 	}
 
 }

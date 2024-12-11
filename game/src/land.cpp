@@ -6,8 +6,10 @@ namespace Flappy
 
 	Land::Land(GameDataRef data) : _data( data)
 	{
-		Sprite sprite1(_data->assets.GetTexture("Land"));
-		Sprite sprite2(_data->assets.GetTexture("Land"));
+		//Sprite sprite1(_data->assets.GetTexture("Land"));
+		//Sprite sprite2(_data->assets.GetTexture("Land"));
+		Sprite sprite1(_data->level->GetLevelTexture("Land"));
+		Sprite sprite2(_data->level->GetLevelTexture("Land"));
 
 		sprite1.setPosition(0, _data->window.getSize().y - sprite1.getGlobalBounds().height);
 		sprite2.setPosition(sprite1.getGlobalBounds().width, _data->window.getSize().y - sprite2.getGlobalBounds().height);
@@ -46,6 +48,12 @@ namespace Flappy
 	{
 		return _landSprites;
 
+	}
+
+	void Land::UpdateSprites() {
+		for (unsigned short int i = 0; i < _landSprites.size(); i++) {
+			_landSprites.at(i).setTexture(_data->level->GetLevelTexture("Land"));
+		}
 	}
 
 	Land::~Land()

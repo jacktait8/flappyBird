@@ -41,6 +41,7 @@ set(RESOURCE_SRC_DIR "${CMAKE_SOURCE_DIR}/Resources")
 # Add the game directory source files
 add_executable(${FLAPPY_BIRD_GAME_TARGET_NAME}
     ${CMAKE_SOURCE_DIR}/game/src/AssetManager.cpp
+    ${CMAKE_SOURCE_DIR}/game/src/LevelManager.cpp
     ${CMAKE_SOURCE_DIR}/game/src/bird.cpp
     ${CMAKE_SOURCE_DIR}/game/src/collision.cpp
     ${CMAKE_SOURCE_DIR}/game/src/Game.cpp

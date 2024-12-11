@@ -21,6 +21,7 @@ namespace Flappy
 
 		void MoveLand(float dt);
 		void DrawLand();
+		void UpdateSprites();
 
 		const vector<Sprite>& GetSprites() const;
 

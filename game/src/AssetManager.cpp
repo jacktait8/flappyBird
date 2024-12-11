@@ -19,7 +19,7 @@ namespace Flappy
 	{
 		Texture tex;
 
-		//printf("Root: %s", m_rootDirectory + fileName);
+		printf("Root: %s\n", (m_rootDirectory + fileName).c_str());
 
 		if (tex.loadFromFile(m_rootDirectory + fileName))
 		{
@@ -27,7 +27,7 @@ namespace Flappy
 		}
 		else
 		{
-			printf("Failed to load Texture");
+			printf("Failed to load Texture name %s at location %s\n", name.c_str(), fileName.c_str());
 		}
 	}
 
@@ -38,17 +38,17 @@ namespace Flappy
 
 		if (font.loadFromFile(m_rootDirectory + fileName))
 		{
-
 			this->_fonts[name] = font;
 		}
 		else
 		{
-			printf("Failed to load Font");
+			printf("Failed to load Font\n");
 		}
 	}
 
 	Texture& AssetManager::GetTexture(std::string name)
 	{
+		printf("Getting texture %s\n", name.c_str());
 		return this->_textures.at(name);
 	}
 

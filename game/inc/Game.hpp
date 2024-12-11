@@ -6,6 +6,7 @@
 #include <iostream>
 #include "StateMachine.hpp"
 #include "AssetManager.hpp"
+#include "LevelManager.hpp"
 #include "InputManager.hpp"
 
 using namespace sf;
@@ -18,6 +19,7 @@ namespace Flappy
 		StateMachine machine;
 		RenderWindow window;
 		AssetManager assets;
+		LevelManager* level;
 		InputManager input;
 	};
 
@@ -28,6 +30,7 @@ namespace Flappy
 	{
 	public:
 		Game(int width, int height, string title);
+		~Game();
 
 
 	private:

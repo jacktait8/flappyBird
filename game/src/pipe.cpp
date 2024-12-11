@@ -5,7 +5,7 @@ namespace Flappy
 {
 	Pipe::Pipe(GameDataRef data) : _data( data )
 	{
-		_landHeight = _data->assets.GetTexture("Land").getSize().y;
+		_landHeight = _data->level->GetLevelTexture("Land").getSize().y;
 		_pipeSpawnYOffset = 0;
 	}
 
